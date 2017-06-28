@@ -1,0 +1,28 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [21 41])
+            ("add" function
+               (:arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [51 57])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [58 64]))                  
+                :type "int")
+                nil [43 109])
+            ("main" function (:type "int") nil [110 185]))          
+      :file "hello.cpp"
+      :pointmax 186
+      :fsize 185
+      :lastmodtime '(22867 47894 860189 642000)
+      :unmatched-syntax nil))
+  :file "!home!ms-gnu!Projects!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

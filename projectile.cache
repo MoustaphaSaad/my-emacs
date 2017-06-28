@@ -1,0 +1,1 @@
+#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8 data ("/home/ms-gnu/Projects/ladder-11/" ("p06" "p06~" "p04.cpp~" "p06.cpp" "p04" ".projectile" "p06.cpp~" "p04.cpp" ".projectile~" "p07.cpp~" "p07" "p07.cpp")))

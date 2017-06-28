@@ -1,0 +1,307 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("benchmark.h" include nil nil [1 23])
+            ("stopwatch.h" include nil nil [24 46])
+            ("cpprelude/dynamic_array.h" include (:system-flag t) nil [48 84])
+            ("vector" include (:system-flag t) nil [85 102])
+            ("cpprelude/stack_array.h" include (:system-flag t) nil [104 138])
+            ("cpprelude/stack_list.h" include (:system-flag t) nil [139 172])
+            ("stack" include (:system-flag t) nil [173 189])
+            ("cpprelude/slinked_list.h" include (:system-flag t) nil [191 226])
+            ("cpprelude/dlinked_list.h" include (:system-flag t) nil [227 262])
+            ("cpprelude/bucket_array.h" include (:system-flag t) nil [263 298])
+            ("list" include (:system-flag t) nil [299 314])
+            ("deque" include (:system-flag t) nil [315 331])
+            ("forward_list" include (:system-flag t) nil [332 355])
+            ("cpprelude/queue_list.h" include (:system-flag t) nil [357 390])
+            ("cpprelude/queue_array.h" include (:system-flag t) nil [391 425])
+            ("queue" include (:system-flag t) nil [426 442])
+            ("cpprelude/priority_queue.h" include (:system-flag t) nil [443 480])
+            ("cpprelude/algorithm.h" include (:system-flag t) nil [482 514])
+            ("algorithm" include (:system-flag t) nil [515 535])
+            ("cpprelude/threading.h" include (:system-flag t) nil [537 569])
+            ("functional" include (:system-flag t) nil [570 591])
+            ("iostream" include (:system-flag t) nil [593 612])
+            ("benchmark_dynamic_array" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [643 666]))                  
+                :type "void")
+                nil [614 1425])
+            ("benchmark_custom_dynamic_array" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1463 1486]))                  
+                :type "void")
+                nil [1427 2557])
+            ("benchmark_slinked_list" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2587 2610]))                  
+                :type "void")
+                nil [2559 3369])
+            ("benchmark_custom_slinked_list" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3406 3429]))                  
+                :type "void")
+                nil [3371 4489])
+            ("benchmark_dlinked_list" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4519 4542]))                  
+                :type "void")
+                nil [4491 5298])
+            ("benchmark_custom_dlinked_list" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5335 5358]))                  
+                :type "void")
+                nil [5300 6417])
+            ("benchmark_stack_array" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6446 6469]))                  
+                :type "void")
+                nil [6419 7217])
+            ("benchmark_custom_stack_array" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7253 7276]))                  
+                :type "void")
+                nil [7219 8045])
+            ("benchmark_stack_list" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8073 8096]))                  
+                :type "void")
+                nil [8047 8842])
+            ("benchmark_custom_stack_list" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8877 8900]))                  
+                :type "void")
+                nil [8844 9949])
+            ("benchmark_queue_list" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9977 10000]))                  
+                :type "void")
+                nil [9951 10750])
+            ("benchmark_custom_queue_list" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10785 10808]))                  
+                :type "void")
+                nil [10752 11859])
+            ("benchmark_queue_array" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11888 11911]))                  
+                :type "void")
+                nil [11861 12662])
+            ("benchmark_priority_queue" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12694 12717]))                  
+                :type "void")
+                nil [12664 13477])
+            ("benchmark_custom_queue_array" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13513 13536]))                  
+                :type "void")
+                nil [13479 14595])
+            ("benchmark_bucket_array" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14625 14648]))                  
+                :type "void")
+                nil [14597 15405])
+            ("benchmark_merge_sort" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15433 15456]))                  
+                :type "void")
+                nil [15407 16427])
+            ("benchmark_quick_sort" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16455 16478]))                  
+                :type "void")
+                nil [16429 17451])
+            ("benchmark_insertion_sort" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17483 17506]))                  
+                :type "void")
+                nil [17453 18487])
+            ("benchmark_heap_sort" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18514 18537]))                  
+                :type "void")
+                nil [18489 19508])
+            ("semaphore_thread_take_func" function
+               (:template 
+                  ( ("semaphore_t" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("sema" variable
+                       (:pointer 1
+                        :type ("semaphore_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19573 19591])
+                    ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19592 19615]))                  )
+                nil [19510 19685])
+            ("semaphore_thread_give_func" function
+               (:template 
+                  ( ("semaphore_t" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("sema" variable
+                       (:pointer 1
+                        :type ("semaphore_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19750 19768])
+                    ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19769 19792]))                  )
+                nil [19687 19862])
+            ("benchmark_binary_semaphore" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19896 19919]))                  
+                :type "void")
+                nil [19864 20716])
+            ("benchmark_count_semaphore" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20749 20772]))                  
+                :type "void")
+                nil [20718 21583])
+            ("thread_unique_dequeue_func" function
+               (:arguments 
+                  ( ("job_queue" variable
+                       (:pointer 1
+                        :type ("cpprelude::thread_unique" type
+                             (:template-specifier 
+                                ( ("cpprelude::queue_array" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21619 21684])
+                    ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21686 21709]))                  
+                :type "void")
+                nil [21585 22012])
+            ("thread_unique_enqueue_func" function
+               (:arguments 
+                  ( ("job_queue" variable
+                       (:pointer 1
+                        :type ("cpprelude::thread_unique" type
+                             (:template-specifier 
+                                ( ("cpprelude::queue_array" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22048 22113])
+                    ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22115 22138]))                  
+                :type "void")
+                nil [22014 22327])
+            ("benchmark_thread_unique" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22358 22381]))                  
+                :type "void")
+                nil [22329 23299])
+            ("thread_multi_reader_read_func" function
+               (:arguments 
+                  ( ("array" variable
+                       (:pointer 1
+                        :type ("cpprelude::thread_multi_reader" type
+                             (:template-specifier 
+                                ( ("cpprelude::dynamic_array" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23338 23407])
+                    ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23409 23432]))                  
+                :type "void")
+                nil [23301 23928])
+            ("thread_multi_reader_insert_func" function
+               (:arguments 
+                  ( ("array" variable
+                       (:pointer 1
+                        :type ("cpprelude::thread_multi_reader" type
+                             (:template-specifier 
+                                ( ("cpprelude::dynamic_array" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23969 24038])
+                    ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24040 24063]))                  
+                :type "void")
+                nil [23930 24323])
+            ("thread_multi_reader_remove_func" function
+               (:arguments 
+                  ( ("array" variable
+                       (:pointer 1
+                        :type ("cpprelude::thread_multi_reader" type
+                             (:template-specifier 
+                                ( ("cpprelude::dynamic_array" type (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    ) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [24364 24433])
+                    ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24435 24458]))                  
+                :type "void")
+                nil [24325 24900])
+            ("thread_multi_reader_job_queue" variable (:type ("cpprelude::thread_multi_reader" type
+                 (:template-specifier 
+                    ( ("cpprelude::dynamic_array" type (:template-specifier 
+                        ( ("int" type nil nil nil))                        ) nil nil))                    
+                  :type "class")
+                  nil nil)) nil [24902 24994])
+            ("benchmark_thread_multi_reader" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25031 25054]))                  
+                :type "void")
+                nil [24996 26506])
+            ("benchmark_vector" function
+               (:arguments 
+                  ( ("limit" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26536 26554]))                  
+                :type "void")
+                nil [26514 27280])
+            ("benchmark_stack" function
+               (:arguments 
+                  ( ("limit" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27303 27321]))                  
+                :type "void")
+                nil [27282 28042])
+            ("benchmark_list" function
+               (:arguments 
+                  ( ("limit" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28064 28082]))                  
+                :type "void")
+                nil [28044 28805])
+            ("benchmark_deque" function
+               (:arguments 
+                  ( ("limit" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28828 28846]))                  
+                :type "void")
+                nil [28807 29572])
+            ("benchmark_forward_list" function
+               (:arguments 
+                  ( ("limit" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29602 29620]))                  
+                :type "void")
+                nil [29574 30360])
+            ("benchmark_queue" function
+               (:arguments 
+                  ( ("limit" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30383 30401]))                  
+                :type "void")
+                nil [30362 31121])
+            ("benchmark_std_sort" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31147 31170]))                  
+                :type "void")
+                nil [31123 32111])
+            ("benchmark_std_stable_sort" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32144 32167]))                  
+                :type "void")
+                nil [32113 33121])
+            ("benchmark_std_priority_queue" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33157 33180]))                  
+                :type "void")
+                nil [33123 33936])
+            ("benchmark_std_heap_sort" function
+               (:arguments 
+                  ( ("limit" variable (:type ("cpprelude::usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33967 33990]))                  
+                :type "void")
+                nil [33938 34989])
+            ("benchmark" function (:type "void") nil [34992 37483]))          
+      :file "benchmark.cpp"
+      :pointmax 37484
+      :fsize 37483
+      :lastmodtime '(22865 26054 770044 400000)
+      :unmatched-syntax nil))
+  :file "!home!ms-gnu!work!Projects!cpprelude!scratch!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

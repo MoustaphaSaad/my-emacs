@@ -1,0 +1,70 @@
+((("ido-switch-buffer" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("beginning-of-line" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("back-to-indentation" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("helm-projectile-switch-project" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("main" .
+   [2 0 0 0])
+  ("board" .
+   [11 0 0 2 1])
+  ("next_board" .
+   [1 0 0 1 0 0 2 0 0 0])
+  ("flip" .
+   [4 0 0 0])
+  ("value" .
+   [5 0 0 0 0])
+  ("printf" .
+   [2 0 0 0 0 0])
+  ("toggle" .
+   [1 0 0 0 0 0])
+  ("smart-line-beginning" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("define-key" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("minibuffer-window" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("minibuffer-window-active-p" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("minibuffer-message" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("minibuffer-local-map" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("keyboard-escape-quit" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("primes" .
+   [10 0 0 0 0 0])
+  ("fill_prime" .
+   [0 0 0 0 1 0 0 0 0 0])
+  ("std" .
+   [41 0 0])
+  ("unsigned" .
+   [0 0 0 0 1 0 0 0])
+  ("size_t" .
+   [16 0 0 0 0 0])
+  ("limit" .
+   [4 0 0 0 0])
+  ("insert" .
+   [1 0 0 0 0 0])
+  ("is_prime" .
+   [3 0 0 0 2 0 0 0])
+  ("set" .
+   [1 0 0])
+  ("number" .
+   [14 0 0 2 1 0])
+  ("cout" .
+   [4 0 0 0])
+  ("vector" .
+   [2 0 0 0 0 0])
+  ("sieve" .
+   [8 0 0 0 0])
+  ("endl" .
+   [5 0 0 0])
+  ("find_biggest_prime_factor" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("result" .
+   [5 0 1 0 0 0])
+  ("max" .
+   [1 0 0])))

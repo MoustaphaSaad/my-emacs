@@ -1,0 +1,102 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("flip" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [31 42]))                  
+                :type "void")
+                nil [21 126])
+            ("toggle" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [140 146])
+                    ("j" variable (:type "int") (reparse-symbol arg-sub-list) [147 153]))                  
+                :type "void")
+                nil [128 651])
+            ("main" function (:type "int") nil [672 1255]))          
+      :file "p06.cpp"
+      :pointmax 1256
+      :fsize 1176
+      :lastmodtime '(22866 41112 526557 395000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("solve" function
+               (:arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [33 49]))                  
+                :type "void")
+                nil [21 376])
+            ("main" function (:type "int") nil [378 489]))          
+      :file "p04.cpp"
+      :pointmax 490
+      :fsize 489
+      :lastmodtime '(22866 39442 361051 560000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("cctype" include (:system-flag t) nil [21 38])
+            ("string" include (:system-flag t) nil [39 56])
+            ("algorithm" include (:system-flag t) nil [57 77])
+            ("style" type (:type "class") nil [84 114])
+            ("decide" function
+               (:arguments 
+                  ( ("str" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [129 152]))                  
+                :type ("style" type (:type "class") nil nil))
+                nil [116 299])
+            ("_map" function
+               (:template 
+                  ( ("container_t" type (:type "class") nil nil)
+                    ("function_t" type (:type "class") nil nil))                  
+                :type ("container_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("container" variable
+                       (:reference 1
+                        :type ("container_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [371 394])
+                    ("func" variable (:type ("function_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [395 411]))                  )
+                nil [301 512])
+            ("convert_to_upper" function
+               (:arguments 
+                  ( ("str" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [544 561]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [514 642])
+            ("convert_to_lower" function
+               (:arguments 
+                  ( ("str" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [675 692]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [645 773])
+            ("main" function (:type "int") nil [775 1056]))          
+      :file "p07.cpp"
+      :pointmax 1057
+      :fsize 1056
+      :lastmodtime '(22867 7572 531394 389000)
+      :unmatched-syntax nil))
+  :file "!home!ms-gnu!Projects!ladder-11!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

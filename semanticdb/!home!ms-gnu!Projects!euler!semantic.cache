@@ -1,0 +1,54 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("calc_fib" function
+               (:arguments 
+                  ( ("index" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [44 64]))                  
+                :type "unsigned long")
+                nil [21 375])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [386 395])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [396 408]))                  
+                :type "int")
+                nil [377 636]))          
+      :file "p02.cpp"
+      :pointmax 637
+      :fsize 636
+      :lastmodtime '(22866 25359 843812 262000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("vector" include (:system-flag t) nil [21 38])
+            ("algorithm" include (:system-flag t) nil [39 59])
+            ("set" include (:system-flag t) nil [60 74])
+            ("is_prime" function
+               (:arguments 
+                  ( ("number" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [90 109]))                  
+                :type "bool")
+                nil [76 221])
+            ("find_biggest_prime_factor" function
+               (:arguments 
+                  ( ("number" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [261 280]))                  
+                :type ("std::size_t" type (:type "class") nil nil))
+                nil [223 549])
+            ("main" function (:type "int") nil [550 673]))          
+      :file "p03.cpp"
+      :pointmax 674
+      :fsize 673
+      :lastmodtime '(22867 10738 307312 426000)
+      :unmatched-syntax nil))
+  :file "!home!ms-gnu!Projects!euler!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

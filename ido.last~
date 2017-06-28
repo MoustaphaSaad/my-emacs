@@ -1,0 +1,57 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/ms-gnu/work/Projects/" . "cpprelude/")
+ ("/home/ms-gnu/work/" . "Projects/")
+ ("/home/ms-gnu/Projects/" . "euler/")
+ ("/home/" . "ms-gnu/")
+ ("/home/ms-gnu/" . "work/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/ms-gnu/work/Projects/cpprelude/"
+ "/home/ms-gnu/Projects/"
+ "/home/ms-gnu/.emacs.d/"
+ "/home/ms-gnu/Projects/euler/"
+ "/home/ms-gnu/Projects/ladder-11/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "LICENSE"
+ "hello.cpp"
+ "init.el"
+ "p03.cpp"
+ "p02"
+ "p07.cpp"
+ "p06.cpp"
+ "p04.cpp"
+ ".projectile"
+ "p04"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/ms-gnu/work/Projects/cpprelude/" (22865 44036 473425 0) "unittest/" "scratch/" "README.md" "premake5.lua" "log" "LICENSE" "cpprelude/" "build/" "bin/" ".gitignore" ".git/" "../" "./")
+
+ ("/home/ms-gnu/work/Projects/" (22864 40514 916135 900000) "____LEARN_2Dsticks_V10/" "ViennaCL-Testbed/" "VGG-Net/" "Udacity-CUDA/" "tensorflow-virtualenv/" "tensorflow-vgg16/" "tensorflow-playground/" "Symbyo-Screening/" "Symbyo/" "SkyWarRevo.rar" "Simulation-Task-02/" "show_and_tell.tensorflow/" "Security-Package/" "Scratch/" "rust-lang/" "ResourcesDriver/" "RemoteSystemsTempFiles/" "regExpr0.1.tar.gz" "regExpr0.1/" "refcpp/" "ProblemSolving/" "Prim/" "Planet_40/" "pattern-recognition-tasks/" "Pattern-Recognition-master.zip" "Pattern-Recognition-master/" "OpenCL-Playground/" "OpenBLAS/" "Open-Compiler-Tools-old/" "Open-Compiler-Tools/" "OCT-NFA/" "Ocean Unity/" "nupic.vision/" "neuraltalk2/" "Neural-Book/" "Network-Task-01.zip" "Network-Task-01/" "MSSL/" "MSNeuralNet/" "Maths/" "Marble/" "ls.exe.stackdump" "llvm/" "lithosphere/" "linalg++/" "libzmq/" "lex.yy.c" "learn-rust/" "ladder-11/" "Karpathy-torch/" "JungleIN-master/" "ImageNet_Utils/" "ImageNetDownloader/" "ImageNet-Downloader/" "Image Tasks/" "GoogleDocsFun/" "gnome-shell-system-monitor-applet/" "fb-hacker-cup/" "examples/" "electron-quick-start/" "DocsFun/" "DC-Project/" "c_play/" "cpprelude/" "CPP-Reflection/" "cpp-allocator/" "CPP/" "CPModel_4_0.zip" "Conway-s-game-Of-Life/" "Compilers-Task01/" "Compiler-Tools-v1.0.zip" "compiler-tools/" "cldoc/" "CastXML/" "caffe-rc3.zip" "c4/" "Break-0.1/" "Blender Projects/" "antlr-playground/" "Algorithms/" "AI_Hack/" "-Pattern-Recognition-Gesture-Classification-/" "OpenSORN/" "Handwritten-Text-Detection/" "../" "./")
+
+ ("/home/ms-gnu/work/" (22843 64558 165883 200000) "Resume/" "LinAlg Party.art" "Games/" "Break-0.1-master/" "wallpapers/" "UE4 - Build 4.0.1/" "System Volume Information/" "LinAlg Party 5.art" "LinAlg Party 4.art" "LinAlg Party 3.art" "LinAlg Party 2.art" "Libraries/" "Gigabyte Z170 D3H/" "Projects/" "party.jpg" "multivariable.pdf" "MostafaSaad.pdf" "Local Disk D_6102017163/" "foo~" "foo" "entropy.py" "emacs-tutorial~" "emacs-tutorial" "Break-0.1/" "Books/" "Art/" "area.ggb" "Applications/" "1.txt" "$RECYCLE.BIN/" "#foo#" "../" "./")
+
+ ("/home/ms-gnu/.emacs.d/" (22867 48018 357036 559000) "snippets/" "elpa/" "ido.last~" "../" "auto-save-list/" "semanticdb/" "./" "init.el" "init.el~" "ido.last" "ac-comphist.dat" "projectile.cache")
+
+ ("/home/ms-gnu/" (22867 45262 320648 988000) "Music/" ".bash_history" "Projects/" ".histfile" ".Private/" ".config/" ".ICEauthority" ".oh-my-zsh/" ".zcompdump" ".ghc/" ".bashrc" ".cache/" ".mozilla/" "Documents/" "Downloads/" ".zshrc" ".zsh-update" ".profile" ".nv/" "Desktop/" ".zshrc.pre-oh-my-zsh" ".emacs~" "Pictures/" ".fonts/" ".zcompdump-tardis-5.2" ".zsh_history" ".emacs.d/" "Templates/" ".pam_environment" ".dbus/" ".bash_logout" ".psensor/" ".atom/" ".sudo_as_admin_successful" ".adobe/" ".wget-hsts" ".pki/" "work/" "Public/" ".ecryptfs/" ".gksu.lock" ".gconf/" ".macromedia/" ".gnupg/" ".local/" "Videos/" "../" "./")
+
+ ("/home/ms-gnu/Projects/ladder-11/" (22867 7594 883638 218000) "p07.cpp" "p07" "p07.cpp~" ".projectile~" "p04.cpp" "../" "./" "p06.cpp~" ".projectile" "p04" "p06.cpp" "p04.cpp~" "p06~" "p06")
+
+ ("/home/ms-gnu/Projects/euler/" (22867 8567 807362 909000) "../" "./" "p02.cpp" "p02.cpp~" ".projectile" "p02")
+
+ ("/home/ms-gnu/Projects/" (22866 35187 497712 949000) "hello.cpp" "euler/" "../" "builder-test/" "./" "hello.cpp~" "ladder-11/" "hello")
+
+ ("/home/" (22864 42163 118581 710000) "ms-gnu/" ".ecryptfs/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
