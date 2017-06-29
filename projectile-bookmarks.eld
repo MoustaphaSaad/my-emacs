@@ -1,1 +1,1 @@
-("~/Projects/ladder-11/")
+("~/Documents/journals/" "~/.emacs.d/" "~/work/Projects/cpprelude/" "~/Projects/ladder-11/")

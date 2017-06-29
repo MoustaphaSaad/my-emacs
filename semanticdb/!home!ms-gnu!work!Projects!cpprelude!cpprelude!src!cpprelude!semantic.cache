@@ -1,0 +1,18 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cpprelude/memory.h" include nil nil [1 30])
+            ("cpprelude" type (:type "namespace") nil [92 116]))          
+      :file "memory.cpp"
+      :pointmax 117
+      :fsize 116
+      :lastmodtime '(22867 65098 320215 600000)
+      :unmatched-syntax nil))
+  :file "!home!ms-gnu!work!Projects!cpprelude!cpprelude!src!cpprelude!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

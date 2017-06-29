@@ -192,6 +192,17 @@ the current position of point, then move it to the beginning of the line."
 (add-hook 'c-mode-hook 'my:cc-config)
 
 (semantic-mode 1)
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
+;;set C-B to build debug mode
+(setq projectile-project-compilation-cmd "bld all dsh64")
+(define-key projectile-mode-map (kbd "C-S-b") 'projectile-compile-project)
+
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-cb" 'org-iswitchb)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -199,7 +210,7 @@ the current position of point, then move it to the beginning of the line."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-	(function-args helm-projectile projectile yasnippet-bundle yasnippet undo-tree iedit helm auto-complete))))
+	(org function-args helm-projectile projectile yasnippet-bundle yasnippet undo-tree iedit helm auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

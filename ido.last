@@ -2,40 +2,61 @@
 
 ;; ----- ido-last-directory-list -----
 (
- ("/home/ms-gnu/work/Projects/cpprelude/" . "scratch/")
+ ("/home/ms-gnu/Documents/" . "journals/")
+ ("/home/ms-gnu/work/Projects/cpprelude/cpprelude/inc/" . "cpprelude/")
+ ("/home/ms-gnu/work/Projects/cpprelude/cpprelude/" . "inc/")
+ ("/home/ms-gnu/work/Projects/cpprelude/" . "cpprelude/")
  ("/home/ms-gnu/work/Projects/" . "cpprelude/")
  ("/home/ms-gnu/work/" . "Projects/")
- ("/home/ms-gnu/Projects/" . "euler/")
+ ("/home/ms-gnu/Projects/" . "ladder-11/")
  ("/home/" . "ms-gnu/")
- ("/home/ms-gnu/" . "work/")
+ ("/home/ms-gnu/" . ".emacs.d/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/ms-gnu/Documents/journals/"
  "/home/ms-gnu/.emacs.d/"
+ "/home/ms-gnu/work/Projects/cpprelude/cpprelude/inc/cpprelude/"
  "/home/ms-gnu/work/Projects/cpprelude/"
+ "/home/ms-gnu/Projects/ladder-11/"
  "/home/ms-gnu/Projects/"
  "/home/ms-gnu/Projects/euler/"
- "/home/ms-gnu/Projects/ladder-11/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "notes.org"
  "init.el"
+ "string.h"
+ "README.md"
+ "p04"
  "LICENSE"
  "hello.cpp"
  "p03.cpp"
  "p02"
  "p07.cpp"
- "p06.cpp"
- "p04.cpp"
- ".projectile"
- "p04"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/ms-gnu/.emacs.d/" (22867 48220 739322 180000) "snippets/" "elpa/" "ido.last~" "../" "auto-save-list/" "semanticdb/" "./" "init.el" "init.el~" "ido.last" "ac-comphist.dat" "projectile.cache")
+ ("/home/ms-gnu/Documents/journals/" (22868 52440 402267 560000) "notes.org" "../" "./" ".projectile")
+
+ ("/home/ms-gnu/Documents/" (22868 52118 770174 149000) "journals/" "../" "./")
+
+ ("/home/ms-gnu/" (22868 51843 394590 14000) ".gitconfig" "Music/" ".bash_history" "Projects/" ".histfile" ".Private/" ".config/" ".ICEauthority" ".oh-my-zsh/" ".zcompdump" ".ghc/" ".bashrc" ".cache/" ".mozilla/" "Documents/" "Downloads/" ".zshrc" ".zsh-update" ".profile" ".nv/" "Desktop/" ".zshrc.pre-oh-my-zsh" ".viminfo" ".emacs~" "Pictures/" ".fonts/" ".zcompdump-tardis-5.2" ".zsh_history" ".emacs.d/" "Templates/" ".pam_environment" ".dbus/" ".bash_logout" ".psensor/" ".atom/" ".sudo_as_admin_successful" ".adobe/" ".wget-hsts" ".pki/" "work/" ".ssh/" ".debug/" "Public/" ".ecryptfs/" ".gksu.lock" ".gconf/" ".macromedia/" ".gnupg/" ".local/" "Videos/" "../" "./")
+
+ ("/home/ms-gnu/.emacs.d/" (22868 6595 219761 435000) "snippets/" "elpa/" "ido.last~" "../" "auto-save-list/" "semanticdb/" "./" "init.el" "init.el~" "ido.last" "ac-comphist.dat" "projectile.cache" ".git/" "session.10a515deaf376c7c52149866071621276600000069510080" "projectile-bookmarks.eld")
+
+ ("/home/ms-gnu/work/Projects/cpprelude/cpprelude/inc/cpprelude/" (22868 5348 247762 700000) "tmp.h" "threading.h" "string.h~" "string.h" "stack_list.h" "stack_array.h" "slinked_list.h" "ring_buffer.h" "quick_union.h" "quick_find.h" "queue_list.h" "queue_array.h" "priority_queue.h" "memory.h" "iterator.h" "dynamic_array.h" "dlinked_list.h" "defines.h" "bucket_list.h" "bucket_array.h" "array.h" "allocator.h" "algorithm.h" "../" "./")
+
+ ("/home/ms-gnu/Projects/euler/" (22867 10749 131671 399000) "../" "./" "p03.cpp" "p02.cpp" "p03" "p02.cpp~" ".projectile" "p03.cpp~" "p02")
+
+ ("/home/ms-gnu/work/Projects/cpprelude/cpprelude/inc/" (22842 43537 206195 0) "cpprelude/" "../" "./")
+
+ ("/home/ms-gnu/work/Projects/cpprelude/cpprelude/" (22842 43537 235212 0) "src/" "inc/" "../" "./")
+
+ ("/home/ms-gnu/Projects/" (22867 47895 68188 224000) "hello.cpp" "euler/" "../" "builder-test/" "./" "hello.cpp~" "ladder-11/" "hello")
 
  ("/home/ms-gnu/work/Projects/cpprelude/scratch/" (22842 43537 275287 0) "src/" "inc/" "../" "./")
 
@@ -45,13 +66,7 @@
 
  ("/home/ms-gnu/work/" (22843 64558 165883 200000) "Resume/" "LinAlg Party.art" "Games/" "Break-0.1-master/" "wallpapers/" "UE4 - Build 4.0.1/" "System Volume Information/" "LinAlg Party 5.art" "LinAlg Party 4.art" "LinAlg Party 3.art" "LinAlg Party 2.art" "Libraries/" "Gigabyte Z170 D3H/" "Projects/" "party.jpg" "multivariable.pdf" "MostafaSaad.pdf" "Local Disk D_6102017163/" "foo~" "foo" "entropy.py" "emacs-tutorial~" "emacs-tutorial" "Break-0.1/" "Books/" "Art/" "area.ggb" "Applications/" "1.txt" "$RECYCLE.BIN/" "#foo#" "../" "./")
 
- ("/home/ms-gnu/" (22867 45262 320648 988000) "Music/" ".bash_history" "Projects/" ".histfile" ".Private/" ".config/" ".ICEauthority" ".oh-my-zsh/" ".zcompdump" ".ghc/" ".bashrc" ".cache/" ".mozilla/" "Documents/" "Downloads/" ".zshrc" ".zsh-update" ".profile" ".nv/" "Desktop/" ".zshrc.pre-oh-my-zsh" ".emacs~" "Pictures/" ".fonts/" ".zcompdump-tardis-5.2" ".zsh_history" ".emacs.d/" "Templates/" ".pam_environment" ".dbus/" ".bash_logout" ".psensor/" ".atom/" ".sudo_as_admin_successful" ".adobe/" ".wget-hsts" ".pki/" "work/" "Public/" ".ecryptfs/" ".gksu.lock" ".gconf/" ".macromedia/" ".gnupg/" ".local/" "Videos/" "../" "./")
-
  ("/home/ms-gnu/Projects/ladder-11/" (22867 7594 883638 218000) "p07.cpp" "p07" "p07.cpp~" ".projectile~" "p04.cpp" "../" "./" "p06.cpp~" ".projectile" "p04" "p06.cpp" "p04.cpp~" "p06~" "p06")
-
- ("/home/ms-gnu/Projects/euler/" (22867 8567 807362 909000) "../" "./" "p02.cpp" "p02.cpp~" ".projectile" "p02")
-
- ("/home/ms-gnu/Projects/" (22866 35187 497712 949000) "hello.cpp" "euler/" "../" "builder-test/" "./" "hello.cpp~" "ladder-11/" "hello")
 
  ("/home/" (22864 42163 118581 710000) "ms-gnu/" ".ecryptfs/" "../" "./")
 )
