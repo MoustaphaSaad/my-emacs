@@ -432,284 +432,370 @@
       :tags 
         '( ("cpprelude/defines.h" include nil nil [15 45])
             ("cpprelude/memory.h" include nil nil [46 75])
-            ("cpprelude/tmp.h" include nil nil [76 102])
-            ("cpprelude/dlinked_list.h" include nil nil [103 138])
-            ("cpprelude/bucket_array.h" include nil nil [139 174])
-            ("ostream" include (:system-flag t) nil [176 194])
+            ("cpprelude/iterator.h" include nil nil [76 107])
+            ("cpprelude/tmp.h" include nil nil [108 134])
+            ("cpprelude/dlinked_list.h" include nil nil [135 170])
+            ("cpprelude/bucket_array.h" include nil nil [171 206])
+            ("ostream" include (:system-flag t) nil [208 226])
+            ("cstdlib" include (:system-flag t) nil [227 245])
+            ("limits" include (:system-flag t) nil [246 263])
+            ("max" variable (:constant-flag t) nil [310 313])
+            ("min" variable (:constant-flag t) nil [326 329])
             ("cpprelude" type
                (:members 
-                  ( ("string" type
+                  ( ("string_slice" type
                        (:template 
-                          ( ("T" type (:type "class") nil nil)
-                            ("AllocatorT" type (:type "class") nil nil))                          
+                          ( ("T" type (:type "class") nil nil))                          
                         :type "struct"
                         :members 
-                          ( ("sequential_iterator" variable (:type "int") (reparse-symbol classsubparts) [317 340])
+                          ( ("sequential_iterator" variable (:type "int") (reparse-symbol classsubparts) [422 445])
                             ("sequential_iterator" variable
                                (:constant-flag t
                                 :type "int")
-                                (reparse-symbol classsubparts) [366 395])
+                                (reparse-symbol classsubparts) [471 500])
                             ("data_type" variable
                                (:default-value "T"
                                 :type "int")
-                                (reparse-symbol classsubparts) [404 418])
+                                (reparse-symbol classsubparts) [509 523])
                             ("_data" variable (:type ("slice" type
                                  (:template-specifier 
                                     ( ("T" type nil nil nil))                                    
                                   :type "class")
-                                  nil nil)) (reparse-symbol classsubparts) [424 439])
-                            ("_owner" variable (:type "bool") (reparse-symbol classsubparts) [442 454])
-                            ("_allocator" variable (:type ("AllocatorT" type (:type "class") nil nil)) (reparse-symbol classsubparts) [457 479])
-                            ("string" function
+                                  nil nil)) (reparse-symbol classsubparts) [527 542])
+                            ("string_slice" function
+                               (:constructor-flag t
+                                :type ("string_slice" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [546 565])
+                            ("string_slice" function
                                (:constructor-flag t
                                 :arguments 
-                                  ( ("count" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [490 502])
-                                    ("allocator" variable
+                                  ( ("data" variable
                                        (:reference 1
                                         :constant-flag t
-                                        :default-value "AllocatorT()"
-                                        :type ("AllocatorT" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [503 545]))                                  
-                                :type ("string" type (:type "struct") nil nil))
-                                (reparse-symbol classsubparts) [483 668])
-                            ("string" function
-                               (:constructor-flag t
-                                :arguments 
-                                  ( ("allocator" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :default-value "AllocatorT()"
-                                        :type ("AllocatorT" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [679 721]))                                  
-                                :type ("string" type (:type "struct") nil nil))
-                                (reparse-symbol classsubparts) [672 767])
-                            ("string" function
-                               (:constructor-flag t
-                                :arguments 
-                                  ( ("" variable
-                                       (:reference 1
-                                        :type ("string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [815 823])
-                                    ("" variable (:type ("other" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [824 830]))                                  
-                                :type ("string" type (:type "struct") nil nil))
-                                (reparse-symbol classsubparts) [808 915])
-                            ("string" function
-                               (:destructor-flag t
-                                :type "void")
-                                (reparse-symbol classsubparts) [919 995])
-                            ("string" function
-                               (:template 
-                                  ( ("char_type" type (:type "class") nil nil))                                  
-                                :type ("string" type (:type "struct") nil nil)
-                                :arguments 
-                                  ( ("str" variable
-                                       (:pointer 1
-                                        :constant-flag t
-                                        :type ("char_type" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [1037 1058])
-                                    ("allocator" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :default-value "AllocatorT()"
-                                        :type ("AllocatorT" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [1059 1101]))                                  
-                                :constructor-flag t)
-                                (reparse-symbol classsubparts) [999 1484])
-                            ("string" function
-                               (:template 
-                                  ( ("char_type" type (:type "class") nil nil))                                  
-                                :type ("string" type (:type "struct") nil nil)
-                                :arguments 
-                                  ( ("str" variable
-                                       (:pointer 1
-                                        :constant-flag t
-                                        :type ("char_type" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [1526 1547])
-                                    ("count" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1548 1560])
-                                    ("allocator" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :default-value "AllocatorT()"
-                                        :type ("AllocatorT" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [1561 1603]))                                  
-                                :constructor-flag t)
-                                (reparse-symbol classsubparts) [1488 1818])
-                            ("=" function
-                               (:operator-flag t
-                                :arguments 
-                                  ( ("" variable
-                                       (:reference 1
-                                        :type ("string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [1890 1898])
-                                    ("" variable (:type ("other" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1899 1905]))                                  
-                                :type ("string" type (:type "class") nil nil))
-                                (reparse-symbol classsubparts) [1870 2037])
+                                        :type ("slice" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [582 603]))                                  
+                                :type ("string_slice" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [569 624])
+                            ("_data" function
+                               (:arguments 
+                                  ( ("" variable (:type ("data" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [668 673]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [662 678])
+                            ("view" function
+                               (:arguments 
+                                  ( ("offset" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [702 715])
+                                    ("count" variable
+                                       (:default-value "0"
+                                        :type ("usize" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [716 731]))                                  
+                                :type ("string_slice" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [682 846])
                             ("count" function
                                (:methodconst-flag t
                                 :type ("usize" type (:type "class") nil nil))
-                                (reparse-symbol classsubparts) [2041 2110])
+                                (reparse-symbol classsubparts) [850 954])
                             ("empty" function
                                (:methodconst-flag t
                                 :type "bool")
-                                (reparse-symbol classsubparts) [2114 2166])
-                            ("clear" function (:type "void") (reparse-symbol classsubparts) [2170 2251])
-                            ("copy" function
-                               (:template 
-                                  ( ("NewAllocT" type (:type "class") nil nil))                                  
-                                :type ("string" type (:type "class") nil nil)
-                                :arguments 
-                                  ( ("offset" variable
-                                       (:default-value "0"
-                                        :type ("usize" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [2319 2335])
-                                    ("allocator" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :default-value "NewAllocT()"
-                                        :type ("NewAllocT" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [2337 2377]))                                  )
-                                (reparse-symbol classsubparts) [2255 2449])
-                            ("copy" function
-                               (:template 
-                                  ( ("NewAllocT" type (:type "class") nil nil))                                  
-                                :type ("string" type (:type "class") nil nil)
-                                :arguments 
-                                  ( ("offset" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2517 2530])
-                                    ("count" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2531 2543])
-                                    ("allocator" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :default-value "NewAllocT()"
-                                        :type ("NewAllocT" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [2544 2584]))                                  )
-                                (reparse-symbol classsubparts) [2453 2663])
-                            ("view" function
-                               (:arguments 
-                                  ( ("offset" variable
-                                       (:default-value "0"
-                                        :type ("usize" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [2681 2697]))                                  
-                                :type ("string" type (:type "class") nil nil))
-                                (reparse-symbol classsubparts) [2667 2817])
-                            ("view" function
-                               (:arguments 
-                                  ( ("offset" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2835 2848])
-                                    ("count" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2849 2861]))                                  
-                                :type ("string" type (:type "class") nil nil))
-                                (reparse-symbol classsubparts) [2821 2976])
-                            ("[]" function
-                               (:operator-flag t
-                                :arguments 
-                                  ( ("index" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2996 3008]))                                  
+                                (reparse-symbol classsubparts) [958 1010])
+                            ("reset" function (:type "void") (reparse-symbol classsubparts) [1014 1079])
+                            ("data" function
+                               (:pointer 1
                                 :type ("T" type (:type "class") nil nil))
-                                (reparse-symbol classsubparts) [2980 3040])
-                            ("[]" function
-                               (:methodconst-flag t
-                                :operator-flag t
-                                :constant-flag t
-                                :arguments 
-                                  ( ("index" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3066 3078]))                                  
-                                :type ("T" type (:type "class") nil nil))
-                                (reparse-symbol classsubparts) [3044 3116])
-                            ("==" function
-                               (:methodconst-flag t
-                                :operator-flag t
-                                :arguments 
-                                  ( ("other" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [3138 3158]))                                  
-                                :type "bool")
-                                (reparse-symbol classsubparts) [3120 3477])
-                            ("!=" function
-                               (:methodconst-flag t
-                                :operator-flag t
-                                :arguments 
-                                  ( ("other" variable
-                                       (:reference 1
-                                        :constant-flag t
-                                        :type ("string" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [3499 3519]))                                  
-                                :type "bool")
-                                (reparse-symbol classsubparts) [3481 3563])
+                                (reparse-symbol classsubparts) [1083 1123])
                             ("data" function
                                (:methodconst-flag t
                                 :pointer 1
                                 :constant-flag t
                                 :type ("T" type (:type "class") nil nil))
-                                (reparse-symbol classsubparts) [3567 3615])
-                            ("data" function
-                               (:pointer 1
+                                (reparse-symbol classsubparts) [1127 1179])
+                            ("[]" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("index" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1199 1211]))                                  
                                 :type ("T" type (:type "class") nil nil))
-                                (reparse-symbol classsubparts) [3619 3655])
-                            ("front" function (:type ("iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3659 3712])
+                                (reparse-symbol classsubparts) [1183 1243])
+                            ("[]" function
+                               (:methodconst-flag t
+                                :operator-flag t
+                                :constant-flag t
+                                :arguments 
+                                  ( ("index" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1269 1281]))                                  
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1247 1299])
+                            ("==" function
+                               (:template 
+                                  ( ("R" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string_slice" type
+                                             (:template-specifier 
+                                                ( ("R" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1344 1373]))                                  
+                                :operator-flag t
+                                :methodconst-flag t)
+                                (reparse-symbol classsubparts) [1303 1682])
+                            ("!=" function
+                               (:template 
+                                  ( ("R" type (:type "class") nil nil))                                  
+                                :type "bool"
+                                :arguments 
+                                  ( ("other" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string_slice" type
+                                             (:template-specifier 
+                                                ( ("R" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1727 1756]))                                  
+                                :operator-flag t
+                                :methodconst-flag t)
+                                (reparse-symbol classsubparts) [1686 1800])
+                            ("front" function (:type ("iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1804 1861])
                             ("front" function
                                (:methodconst-flag t
                                 :type ("const_iterator" type (:type "class") nil nil))
-                                (reparse-symbol classsubparts) [3716 3787])
-                            ("back" function (:type ("iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3791 3853])
+                                (reparse-symbol classsubparts) [1865 1940])
+                            ("back" function (:type ("iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1944 2014])
                             ("back" function
                                (:methodconst-flag t
                                 :type ("const_iterator" type (:type "class") nil nil))
-                                (reparse-symbol classsubparts) [3857 3937])
-                            ("begin" function (:type ("iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3941 3994])
+                                (reparse-symbol classsubparts) [2018 2106])
+                            ("begin" function (:type ("iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2110 2167])
                             ("begin" function
                                (:methodconst-flag t
                                 :type ("const_iterator" type (:type "class") nil nil))
-                                (reparse-symbol classsubparts) [3998 4069])
-                            ("end" function (:type ("iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4073 4142])
+                                (reparse-symbol classsubparts) [2171 2246])
+                            ("end" function (:type ("iterator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2250 2315])
                             ("end" function
                                (:methodconst-flag t
                                 :type ("const_iterator" type (:type "class") nil nil))
-                                (reparse-symbol classsubparts) [4146 4233])
+                                (reparse-symbol classsubparts) [2319 2402])
                             ("decay" function (:type ("slice" type
                                  (:template-specifier 
                                     ( ("T" type nil nil nil))                                    
                                   :type "class")
-                                  nil nil)) (reparse-symbol classsubparts) [4237 4293])
+                                  nil nil)) (reparse-symbol classsubparts) [2406 2462])
                             ("decay_continuous" function (:type ("slice" type
                                  (:template-specifier 
                                     ( ("T" type nil nil nil))                                    
                                   :type "class")
-                                  nil nil)) (reparse-symbol classsubparts) [4297 4391]))                          )
-                        (reparse-symbol namespacesubparts) [219 4395])
-                    ("<<" function
+                                  nil nil)) (reparse-symbol classsubparts) [2466 2531])
+                            ("from_cstring" function
+                               (:template 
+                                  ( ("AllocatorT" type (:type "class") nil nil))                                  
+                                :type ("string_slice" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("str" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2646 2659])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("AllocatorT" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2660 2672])
+                                    ("" variable (:type ("allocator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2673 2697]))                                  
+                                :typemodifiers ("static"))
+                                (reparse-symbol classsubparts) [2560 2987])
+                            ("from_cstring" function
+                               (:template 
+                                  ( ("AllocatorT" type (:type "class") nil nil))                                  
+                                :type ("string_slice" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("str" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3077 3090])
+                                    ("count" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3091 3103])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("AllocatorT" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3104 3116])
+                                    ("" variable (:type ("allocator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3117 3141]))                                  
+                                :typemodifiers ("static"))
+                                (reparse-symbol classsubparts) [2991 3348])
+                            ("literal" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("str" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3391 3404])
+                                    ("str_count" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3405 3421]))                                  
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type (:constant-flag t) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [3352 3541])
+                            ("copy" function
+                               (:template 
+                                  ( ("AllocatorT" type (:type "class") nil nil))                                  
+                                :type ("string_slice" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string_slice" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3623 3647])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("AllocatorT" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3648 3660])
+                                    ("" variable (:type ("allocator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3661 3685]))                                  
+                                :typemodifiers ("static"))
+                                (reparse-symbol classsubparts) [3545 3932])
+                            ("dispose" function
+                               (:template 
+                                  ( ("AllocatorT" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :type ("string_slice" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4009 4027])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("AllocatorT" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4028 4040])
+                                    ("" variable (:type ("allocator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4041 4065]))                                  
+                                :typemodifiers ("static"))
+                                (reparse-symbol classsubparts) [3936 4104])
+                            ("dispose" function
+                               (:template 
+                                  ( ("AllocatorT" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("string_slice" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4181 4195])
+                                    ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4196 4200])
+                                    ("" variable
+                                       (:reference 1
+                                        :type ("AllocatorT" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4201 4213])
+                                    ("" variable (:type ("allocator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4214 4238]))                                  
+                                :typemodifiers ("static"))
+                                (reparse-symbol classsubparts) [4108 4288]))                          )
+                        (reparse-symbol namespacesubparts) [358 4292])
+                    ("string_slice" variable (:type "int") (reparse-symbol namespacesubparts) [4339 4361])
+                    ("string_slice" variable (:type "int") (reparse-symbol namespacesubparts) [4379 4398])
+                    ("literal_slice" variable (:type "int") (reparse-symbol namespacesubparts) [4416 4436])
+                    ("string_slice" variable (:type "int") (reparse-symbol namespacesubparts) [4454 4476])
+                    ("literal_slice" variable (:type "int") (reparse-symbol namespacesubparts) [4495 4518])
+                    ("local_string_slice" type
                        (:template 
                           ( ("T" type (:type "class") nil nil)
-                            ("AllocatorT" type (:type "class") nil nil))                          
+                            ("usize" type (:typevar "slice_size") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("_buffer" variable
+                               (:dereference 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4616 4638])
+                            ("local_string_slice" function
+                               (:constructor-flag t
+                                :type ("local_string_slice" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [4642 4756])
+                            ("local_string_slice" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("str" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4779 4792]))                                  
+                                :type ("local_string_slice" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [4760 5027])
+                            ("local_string_slice" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("literal_slice" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [5050 5078]))                                  
+                                :type ("local_string_slice" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [5031 5320])
+                            ("=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("str" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("T" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5356 5369]))                                  
+                                :type ("local_string_slice" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5324 5535])
+                            ("=" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("literal_slice" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [5571 5599]))                                  
+                                :type ("local_string_slice" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5539 5772]))                          
+                        :superclasses 
+                          ( ("string_slice" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          )
+                        (reparse-symbol namespacesubparts) [4521 5776])
+                    ("<<" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
                         :type ("std::ostream" type (:type "class") nil nil)
                         :arguments 
                           ( ("out" variable
                                (:reference 1
                                 :type ("std::ostream" type (:type "class") nil nil))
-                                (reparse-symbol arg-sub-list) [4467 4485])
+                                (reparse-symbol arg-sub-list) [5827 5845])
                             ("str" variable
                                (:reference 1
                                 :constant-flag t
-                                :type ("string" type
+                                :type ("string_slice" type
                                      (:template-specifier 
-                                        ( ("T" type nil nil nil)
-                                          ("AllocatorT" type nil nil nil))                                        
+                                        ( ("T" type nil nil nil))                                        
                                       :type "class")
                                       nil nil))
-                                (reparse-symbol arg-sub-list) [4486 4519]))                          
+                                (reparse-symbol arg-sub-list) [5845 5872]))                          
                         :operator-flag t)
-                        (reparse-symbol namespacesubparts) [4398 4596])
-                    ("string_writer" type
+                        (reparse-symbol namespacesubparts) [5779 5913])
+                    ("local_string_slice" variable (:type "int") (reparse-symbol namespacesubparts) [5965 6002])
+                    ("local_string_slice" variable (:type "int") (reparse-symbol namespacesubparts) [6055 6095])
+                    ("writer" type
                        (:template 
                           ( ("T" type (:type "class") nil nil)
                             ("AllocatorT" type (:type "class") nil nil))                          
                         :type "struct"
                         :members 
-                          ( ("_strings" variable (:type ("dlinked_list" type
-                                 (:template-specifier 
-                                    ( ("T" type nil nil nil)
-                                      ("AllocatorT" type nil nil nil))                                    
-                                  :type "class")
-                                  nil nil)) (reparse-symbol classsubparts) [4687 4724])
-                            ("_count" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4727 4740])
-                            ("string_writer" function
+                          ( ("_buffer" variable (:type ("container_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6304 6327])
+                            ("_allocator" variable (:type ("AllocatorT" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6330 6352])
+                            ("writer" function
                                (:constructor-flag t
                                 :arguments 
                                   ( ("allocator" variable
@@ -717,50 +803,1124 @@
                                         :constant-flag t
                                         :default-value "AllocatorT()"
                                         :type ("AllocatorT" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [4758 4800]))                                  
-                                :type ("string_writer" type (:type "struct") nil nil))
-                                (reparse-symbol classsubparts) [4744 4830])
+                                        (reparse-symbol arg-sub-list) [6363 6405]))                                  
+                                :type ("writer" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [6356 6457])
+                            ("write_back" function
+                               (:arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string_slice" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6479 6506]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6461 6571])
+                            ("write_front" function
+                               (:arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string_slice" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6594 6621]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6575 6740])
                             ("write_back" function
                                (:arguments 
                                   ( ("" variable
                                        (:reference 1
-                                        :type ("T" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [4852 4855])
-                                    ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4856 4860]))                                  
+                                        :type ("string_slice" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6762 6779])
+                                    ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6780 6784]))                                  
                                 :type "void")
-                                (reparse-symbol classsubparts) [4834 4935])
-                            ("write_back" function
-                               (:arguments 
-                                  ( ("str" variable
-                                       (:pointer 1
-                                        :constant-flag t
-                                        :type "char")
-                                        (reparse-symbol arg-sub-list) [4957 4973]))                                  
-                                :type "void")
-                                (reparse-symbol classsubparts) [4939 5014])
+                                (reparse-symbol classsubparts) [6744 6849])
                             ("write_front" function
                                (:arguments 
                                   ( ("" variable
                                        (:reference 1
-                                        :type ("T" type (:type "class") nil nil))
-                                        (reparse-symbol arg-sub-list) [5037 5040])
-                                    ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5041 5045]))                                  
+                                        :type ("string_slice" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [6872 6889])
+                                    ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6890 6894]))                                  
                                 :type "void")
-                                (reparse-symbol classsubparts) [5018 5121])
-                            ("clear" function (:type "void") (reparse-symbol classsubparts) [5125 5183])
+                                (reparse-symbol classsubparts) [6853 7012])
+                            ("write_back" function
+                               (:arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("literal_slice" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7034 7062]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7016 7127])
+                            ("write_front" function
+                               (:arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("literal_slice" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7150 7178]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7131 7297])
+                            ("write_back" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("literal_slice" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7319 7337])
+                                    ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7338 7342]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7301 7407])
+                            ("write_front" function
+                               (:arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("literal_slice" type
+                                             (:template-specifier 
+                                                ( ("T" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [7430 7448])
+                                    ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7449 7453]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7411 7571])
+                            ("clear" function (:type "void") (reparse-symbol classsubparts) [7575 7617])
                             ("empty" function
                                (:methodconst-flag t
                                 :type "bool")
-                                (reparse-symbol classsubparts) [5187 5238])
-                            ("output" function (:type "int") (reparse-symbol classsubparts) [5338 5634]))                          )
-                        (reparse-symbol namespacesubparts) [4599 5638]))                  
+                                (reparse-symbol classsubparts) [7621 7681])
+                            ("output" function (:type ("string_slice" type
+                                 (:template-specifier 
+                                    ( ("T" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [7685 7993])
+                            ("output" function
+                               (:template 
+                                  ( ("NewAllocT" type (:type "class") nil nil))                                  
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :arguments 
+                                  ( ("allocator" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("NewAllocT" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8066 8093]))                                  )
+                                (reparse-symbol classsubparts) [7997 8374]))                          )
+                        (reparse-symbol namespacesubparts) [6098 8378])
+                    ("writer" variable (:type "int") (reparse-symbol namespacesubparts) [8454 8479])
+                    ("writer" variable (:type "int") (reparse-symbol namespacesubparts) [8555 8583])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8679 8700])
+                            ("val" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8701 8710]))                          )
+                        (reparse-symbol namespacesubparts) [8647 8776])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8812 8829])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8830 8834])
+                            ("val" variable (:type ("byte" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8835 8844]))                          )
+                        (reparse-symbol namespacesubparts) [8780 8875])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [8924 8945])
+                            ("val" variable (:type ("i8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8946 8953]))                          )
+                        (reparse-symbol namespacesubparts) [8892 9021])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9056 9073])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9074 9078])
+                            ("val" variable (:type ("i8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9079 9086]))                          )
+                        (reparse-symbol namespacesubparts) [9024 9117])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9167 9188])
+                            ("val" variable (:type ("u8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9189 9196]))                          )
+                        (reparse-symbol namespacesubparts) [9135 9264])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9299 9316])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9317 9321])
+                            ("val" variable (:type ("u8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9322 9329]))                          )
+                        (reparse-symbol namespacesubparts) [9267 9360])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9410 9431])
+                            ("val" variable (:type ("i16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9432 9440]))                          )
+                        (reparse-symbol namespacesubparts) [9378 9507])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9542 9559])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9560 9564])
+                            ("val" variable (:type ("i16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9565 9573]))                          )
+                        (reparse-symbol namespacesubparts) [9510 9604])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9655 9676])
+                            ("val" variable (:type ("u16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9677 9685]))                          )
+                        (reparse-symbol namespacesubparts) [9623 9752])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9787 9804])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9805 9809])
+                            ("val" variable (:type ("u16" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9810 9818]))                          )
+                        (reparse-symbol namespacesubparts) [9755 9849])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9899 9920])
+                            ("val" variable (:type ("i32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9921 9929]))                          )
+                        (reparse-symbol namespacesubparts) [9867 9995])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [10030 10047])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10048 10052])
+                            ("val" variable (:type ("i32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10053 10061]))                          )
+                        (reparse-symbol namespacesubparts) [9998 10092])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [10143 10164])
+                            ("val" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10165 10173]))                          )
+                        (reparse-symbol namespacesubparts) [10111 10239])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [10274 10291])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10292 10296])
+                            ("val" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10297 10305]))                          )
+                        (reparse-symbol namespacesubparts) [10242 10336])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [10386 10407])
+                            ("val" variable (:type ("i64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10408 10416]))                          )
+                        (reparse-symbol namespacesubparts) [10354 10483])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [10518 10535])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10536 10540])
+                            ("val" variable (:type ("i64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10541 10549]))                          )
+                        (reparse-symbol namespacesubparts) [10486 10580])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [10631 10652])
+                            ("val" variable (:type ("u64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10653 10661]))                          )
+                        (reparse-symbol namespacesubparts) [10599 10728])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [10763 10780])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10781 10785])
+                            ("val" variable (:type ("u64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10786 10794]))                          )
+                        (reparse-symbol namespacesubparts) [10731 10825])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [10875 10896])
+                            ("val" variable (:type ("r32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10897 10905]))                          )
+                        (reparse-symbol namespacesubparts) [10843 10971])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [11006 11023])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11024 11028])
+                            ("val" variable (:type ("r32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11029 11037]))                          )
+                        (reparse-symbol namespacesubparts) [10974 11068])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [11119 11140])
+                            ("val" variable (:type ("r64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11141 11149]))                          )
+                        (reparse-symbol namespacesubparts) [11087 11215])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [11250 11267])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11268 11272])
+                            ("val" variable (:type ("r64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11273 11281]))                          )
+                        (reparse-symbol namespacesubparts) [11218 11312])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [11366 11387])
+                            ("val" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [11388 11398]))                          )
+                        (reparse-symbol namespacesubparts) [11334 11464])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [11499 11516])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11517 11521])
+                            ("val" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [11522 11532]))                          )
+                        (reparse-symbol namespacesubparts) [11467 11563])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [11598 11619])
+                            ("val" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [11620 11647]))                          )
+                        (reparse-symbol namespacesubparts) [11566 11928])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [11963 11980])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11981 11985])
+                            ("val" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [11986 12013]))                          )
+                        (reparse-symbol namespacesubparts) [11931 12044])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12079 12100])
+                            ("val" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("literal_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12101 12129]))                          )
+                        (reparse-symbol namespacesubparts) [12047 12410])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12445 12462])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12463 12467])
+                            ("val" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("literal_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12468 12496]))                          )
+                        (reparse-symbol namespacesubparts) [12413 12527])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12562 12583])
+                            ("val" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12584 12597]))                          )
+                        (reparse-symbol namespacesubparts) [12530 12804])
+                    ("show" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12839 12856])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12857 12861])
+                            ("val" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12862 12875]))                          )
+                        (reparse-symbol namespacesubparts) [12807 12906])
+                    ("write" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("FirstT" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12959 12980])
+                            ("" variable
+                               (:reference 1
+                                :type ("FirstT" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12981 12989])
+                            ("" variable (:type ("first_arg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12990 13000]))                          )
+                        (reparse-symbol namespacesubparts) [12909 13059])
+                    ("write" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil)
+                            ("FirstT" type (:type "class") nil nil))                          
+                        :type ("i32" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13113 13130])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13131 13135])
+                            ("" variable
+                               (:reference 1
+                                :type ("FirstT" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13136 13144])
+                            ("" variable (:type ("first_arg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13145 13155]))                          )
+                        (reparse-symbol namespacesubparts) [13063 13215])
+                    ("write" function
+                       (:arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13326 13347])
+                            ("" variable
+                               (:reference 1
+                                :type ("FirstT" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13348 13356])
+                            ("" variable (:type ("first_arg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13357 13367])
+                            ("" variable
+                               (:reference 1
+                                :type ("ArgsT" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13368 13375])
+                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13379 13384]))                          
+                        :type ("i32" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [13315 13514])
+                    ("write" function
+                       (:arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13587 13604])
+                            ("" variable (:type ("str" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13605 13609])
+                            ("" variable
+                               (:reference 1
+                                :type ("FirstT" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13610 13618])
+                            ("" variable (:type ("first_arg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13619 13629])
+                            ("" variable
+                               (:reference 1
+                                :type ("ArgsT" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13630 13637])
+                            ("" variable (:type ("args" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13641 13646]))                          
+                        :type ("i32" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [13576 13776])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13812 13839])
+                            ("result" variable
+                               (:reference 1
+                                :type ("i16" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13840 13852])
+                            ("base" variable
+                               (:default-value "10"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [13853 13866]))                          )
+                        (reparse-symbol namespacesubparts) [13779 14142])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("literal_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14178 14206])
+                            ("result" variable
+                               (:reference 1
+                                :type ("i16" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14207 14219])
+                            ("base" variable
+                               (:default-value "10"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [14220 14233]))                          )
+                        (reparse-symbol namespacesubparts) [14145 14509])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14545 14572])
+                            ("result" variable
+                               (:reference 1
+                                :type ("i32" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14573 14585])
+                            ("base" variable
+                               (:default-value "10"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [14586 14599]))                          )
+                        (reparse-symbol namespacesubparts) [14512 14875])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("literal_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14911 14939])
+                            ("result" variable
+                               (:reference 1
+                                :type ("i32" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14940 14952])
+                            ("base" variable
+                               (:default-value "10"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [14953 14966]))                          )
+                        (reparse-symbol namespacesubparts) [14878 15242])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [15278 15305])
+                            ("result" variable
+                               (:reference 1
+                                :type ("i64" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15306 15318])
+                            ("base" variable
+                               (:default-value "10"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [15319 15332]))                          )
+                        (reparse-symbol namespacesubparts) [15245 15492])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("literal_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [15528 15556])
+                            ("result" variable
+                               (:reference 1
+                                :type ("i64" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15557 15569])
+                            ("base" variable
+                               (:default-value "10"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [15570 15583]))                          )
+                        (reparse-symbol namespacesubparts) [15495 15743])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [15779 15806])
+                            ("result" variable
+                               (:reference 1
+                                :type ("u16" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15807 15819])
+                            ("base" variable
+                               (:default-value "10"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [15820 15833]))                          )
+                        (reparse-symbol namespacesubparts) [15746 16060])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("literal_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [16096 16124])
+                            ("result" variable
+                               (:reference 1
+                                :type ("u16" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16125 16137])
+                            ("base" variable
+                               (:default-value "10"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [16138 16151]))                          )
+                        (reparse-symbol namespacesubparts) [16063 16378])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [16414 16441])
+                            ("result" variable
+                               (:reference 1
+                                :type ("u32" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16442 16454])
+                            ("base" variable
+                               (:default-value "10"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [16455 16468]))                          )
+                        (reparse-symbol namespacesubparts) [16381 16695])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("literal_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [16731 16759])
+                            ("result" variable
+                               (:reference 1
+                                :type ("u32" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16760 16772])
+                            ("base" variable
+                               (:default-value "10"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [16773 16786]))                          )
+                        (reparse-symbol namespacesubparts) [16698 17013])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [17049 17076])
+                            ("result" variable
+                               (:reference 1
+                                :type ("u64" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17077 17089])
+                            ("base" variable
+                               (:default-value "10"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [17090 17103]))                          )
+                        (reparse-symbol namespacesubparts) [17016 17264])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("literal_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [17300 17328])
+                            ("result" variable
+                               (:reference 1
+                                :type ("u64" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17329 17341])
+                            ("base" variable
+                               (:default-value "10"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [17342 17355]))                          )
+                        (reparse-symbol namespacesubparts) [17267 17516])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [17552 17579])
+                            ("result" variable
+                               (:reference 1
+                                :type ("r32" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17580 17592]))                          )
+                        (reparse-symbol namespacesubparts) [17519 17744])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("literal_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [17780 17808])
+                            ("result" variable
+                               (:reference 1
+                                :type ("r32" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17809 17821]))                          )
+                        (reparse-symbol namespacesubparts) [17747 17973])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [18009 18036])
+                            ("result" variable
+                               (:reference 1
+                                :type ("r64" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18037 18049]))                          )
+                        (reparse-symbol namespacesubparts) [17976 18201])
+                    ("read" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("literal_slice" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [18237 18265])
+                            ("result" variable
+                               (:reference 1
+                                :type ("r64" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18266 18278]))                          )
+                        (reparse-symbol namespacesubparts) [18204 18430])
+                    ("_l" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("str" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [18472 18488])
+                            ("str_count" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18489 18511]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [18469 18512])
+                    ("_l" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("str" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "wchar_t")
+                                (reparse-symbol arg-sub-list) [18554 18573])
+                            ("str_count" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18574 18596]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [18551 18597]))                  
                 :type "namespace")
-                nil [196 5640]))          
+                nil [335 18599]))          
       :file "string.h"
-      :pointmax 5641
-      :fsize 5640
-      :lastmodtime '(22868 9433 309767 200000)
-      :unmatched-syntax '((punctuation 5334 . 5335) (symbol 5325 . 5334) (punctuation 5323 . 5324) (symbol 5314 . 5323) (punctuation 5313 . 5314) (punctuation 5312 . 5313) (symbol 5311 . 5312) (TYPENAME 5302 . 5310) (punctuation 5301 . 5302) (symbol 5295 . 5301) (punctuation 5291 . 5292) (symbol 5275 . 5291) (punctuation 5273 . 5274) (symbol 5263 . 5272) (TYPENAME 5254 . 5262) (punctuation 5253 . 5254) (TEMPLATE 5245 . 5253) (punctuation 5039 . 5040) (punctuation 4854 . 4855) (punctuation 1897 . 1898) (punctuation 1865 . 1866) (DELETE 1859 . 1865) (punctuation 1857 . 1858) (semantic-list 1841 . 1856) (punctuation 1840 . 1841) (OPERATOR 1832 . 1840) (punctuation 1828 . 1829) (symbol 1822 . 1828) (punctuation 822 . 823) (punctuation 801 . 802) (DELETE 795 . 801) (punctuation 793 . 794) (semantic-list 777 . 792) (symbol 771 . 777) (USING 398 . 403) (punctuation 364 . 365) (symbol 349 . 363) (USING 343 . 348) (punctuation 315 . 316) (symbol 306 . 314) (USING 300 . 305) (symbol 9 . 13) (symbol 2 . 8) (punctuation 1 . 2) (punctuation 5334 . 5335) (symbol 5325 . 5334) (punctuation 5323 . 5324) (symbol 5314 . 5323) (punctuation 5313 . 5314) (punctuation 5312 . 5313) (symbol 5311 . 5312) (TYPENAME 5302 . 5310) (punctuation 5301 . 5302) (symbol 5295 . 5301) (punctuation 5291 . 5292) (symbol 5275 . 5291) (punctuation 5273 . 5274) (symbol 5263 . 5272) (TYPENAME 5254 . 5262) (punctuation 5253 . 5254) (TEMPLATE 5245 . 5253) (punctuation 5039 . 5040)))
+      :pointmax 18600
+      :fsize 18599
+      :lastmodtime '(22871 41537 391367 900000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("max" . ((symbol "max" 314 . 317)))
+          ("min" . ((symbol "min" 330 . 333)))
+          )
+)
     (semanticdb-table "semanticdb-table"
       :major-mode c++-mode
       :tags 
@@ -1123,8 +2283,8 @@
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :file "iterator.h"
-      :fsize 5786
-      :lastmodtime '(22857 46353 219781 300000))
+      :fsize 5888
+      :lastmodtime '(22870 46739 525099 400000))
     (semanticdb-table "semanticdb-table"
       :major-mode c++-mode
       :tags 
@@ -2403,8 +3563,8 @@
                 nil [132 9815]))          
       :file "bucket_array.h"
       :pointmax 9816
-      :fsize 9815
-      :lastmodtime '(22868 8079 880541 300000)
+      :fsize 10144
+      :lastmodtime '(22870 6542 146326 900000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c++-mode

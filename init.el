@@ -203,17 +203,75 @@ the current position of point, then move it to the beginning of the line."
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-	(org function-args helm-projectile projectile yasnippet-bundle yasnippet undo-tree iedit helm auto-complete))))
+(global-linum-mode t)
+
+(require 'git-gutter-fringe)
+(set-face-foreground 'git-gutter-fr:modified "yellow")
+(setq-default left-fringe-width  20)
+(setq-default right-fringe-width 20)
+
+(fringe-helper-define 'git-gutter-fr:added nil
+  "XX......"
+  "XX......"
+  "XX......"
+  "XX......"
+  "XX......"
+  "XX......"
+  "XX......"
+  "XX......")
+
+(fringe-helper-define 'git-gutter-fr:deleted nil
+  "XX......"
+  "XX......"
+  "XX......"
+  "XX......"
+  "XX......"
+  "XX......"
+  "XX......"
+  "XX......")
+
+(fringe-helper-define 'git-gutter-fr:modified nil
+  "XX......"
+  "XX......"
+  "XX......"
+  "XX......"
+  "XX......"
+  "XX......"
+  "XX......"
+  "XX......")
+
+(global-git-gutter-mode t)
+;;(load-theme 'dracula t)
+
+
+;;(require 'Powerline)
+;;(setq powerline-arrow-shape 'arrow)   ;; the default
+;;(require 'spaceline-config)
+;;(spaceline-emacs-theme)
+
+(setq-default fill-column 80)
+(auto-fill-mode t)
+(require 'visual-fill-column)
+(visual-fill-column-mode t)
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+ '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-day)))
+ '(custom-safe-themes
+   (quote
+	("bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "b04425cc726711a6c91e8ebc20cf5a3927160681941e06bc7900a5a5bfe1a77f" default)))
+ '(package-selected-packages
+   (quote
+	(color-theme-sanityinc-tomorrow visual-fill-column spaceline powerline git-gutter-fringe dracula-theme org function-args helm-projectile projectile yasnippet-bundle yasnippet undo-tree iedit helm auto-complete))))
+
