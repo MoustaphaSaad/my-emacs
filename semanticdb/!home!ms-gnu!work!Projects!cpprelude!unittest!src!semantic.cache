@@ -1,0 +1,40 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("catch.hpp" include nil nil [1 21])
+            ("cpprelude/rb_tree.h" include (:system-flag t) nil [22 52])
+            ("cpprelude/dynamic_array.h" include (:system-flag t) nil [53 89])
+            ("cpprelude/algorithm.h" include (:system-flag t) nil [90 121])
+            ("cpprelude/iterator.h" include (:system-flag t) nil [122 152])
+            ("string" include (:system-flag t) nil [154 170])
+            ("functional" include (:system-flag t) nil [171 192])
+            ("iostream" include (:system-flag t) nil [193 212])
+            ("cpprelude" using (:type ("cpprelude" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [213 239])
+            ("print_fn" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("it" variable (:type ("rb_tree_iterator" type
+                         (:template-specifier 
+                            ( ("T" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [276 299]))                  )
+                nil [241 816])
+            ("TEST_CASE" function (:type "int") nil [818 12915]))          
+      :file "unittest_rb_tree.cpp"
+      :pointmax 12916
+      :fsize 12915
+      :lastmodtime '(22874 37240 211585 400000)
+      :unmatched-syntax nil))
+  :file "!home!ms-gnu!work!Projects!cpprelude!unittest!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

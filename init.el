@@ -186,6 +186,8 @@ the current position of point, then move it to the beginning of the line."
   (global-set-key (kbd "TAB") 'my-insert-tab-char)
 
   (turn-on-auto-fill) (set-fill-column 80)
+
+  (idle-highlight-mode t)
 )
 ; now let's call this function from c/c++ hooks
 (add-hook 'c++-mode-hook 'my:cc-config)
@@ -254,6 +256,19 @@ the current position of point, then move it to the beginning of the line."
 (require 'visual-fill-column)
 (visual-fill-column-mode t)
 
+(setq scroll-step 1)
+(setq scroll-conservatively 1000)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+;;(setq mouse-wheel-progressive-speed nil)
+(setq mouse-wheel-follow-mouse t)
+
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c") 'mc/edit-lines)
+
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-S->") 'mc/mark-all-like-this)
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -273,5 +288,5 @@ the current position of point, then move it to the beginning of the line."
 	("bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "b04425cc726711a6c91e8ebc20cf5a3927160681941e06bc7900a5a5bfe1a77f" default)))
  '(package-selected-packages
    (quote
-	(color-theme-sanityinc-tomorrow visual-fill-column spaceline powerline git-gutter-fringe dracula-theme org function-args helm-projectile projectile yasnippet-bundle yasnippet undo-tree iedit helm auto-complete))))
+	(multiple-cursors color-theme-sanityinc-tomorrow visual-fill-column spaceline powerline git-gutter-fringe dracula-theme org function-args helm-projectile projectile yasnippet-bundle yasnippet undo-tree iedit helm auto-complete))))
 

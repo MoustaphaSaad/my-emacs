@@ -11,8 +11,32 @@
       :file "memory.cpp"
       :pointmax 117
       :fsize 116
-      :lastmodtime '(22867 65098 320215 600000)
-      :unmatched-syntax nil))
+      :lastmodtime '(22881 3800 128539 400000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("cpprelude/hash_array.h" include nil nil [1 34])
+            ("cpprelude" type
+               (:members 
+                  ( ("hash_bytes" function
+                       (:arguments 
+                          ( ("ptr" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [77 93])
+                            ("len" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94 104])
+                            ("seed" variable (:type ("usize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [105 116]))                          
+                        :type ("usize" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [59 201]))                  
+                :type "namespace")
+                nil [36 203]))          
+      :file "hash_array.cpp"
+      :pointmax 204
+      :fsize 203
+      :lastmodtime '(22881 5750 191095 800000)
+      :unmatched-syntax '((symbol 69 . 75) (NAMESPACE 59 . 68) (symbol 69 . 75) (NAMESPACE 59 . 68) (symbol 69 . 76) (NAMESPACE 59 . 68) (symbol 69 . 76) (NAMESPACE 59 . 68) (symbol 73 . 83) (symbol 66 . 71) (INLINE 59 . 65) (symbol 73 . 83) (symbol 66 . 71) (INLINE 59 . 65) (symbol 66 . 71) (INLINE 59 . 65) (symbol 66 . 71) (INLINE 59 . 65) (INLINE 59 . 65) (NAMESPACE 36 . 45))))
   :file "!home!ms-gnu!work!Projects!cpprelude!cpprelude!src!cpprelude!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

@@ -1,0 +1,23 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("_GLIBCXX_FUNCTIONAL" variable (:constant-flag t) nil [1740 1759])
+            ("bits/c++config.h" include (:system-flag t) nil [1790 1817])
+            ("bits/stl_function.h" include (:system-flag t) nil [1818 1848]))          
+      :file "functional"
+      :pointmax 70418
+      :fsize 70417
+      :lastmodtime '(22759 33892 0 0)
+      :unmatched-syntax '((symbol 1775 . 1788) (symbol 1771 . 1774) (symbol 1764 . 1770) (punctuation 1763 . 1764))
+      :lexical-table 
+        '(("_GLIBCXX_FUNCTIONAL" . ((number "1" 1760 . 1761)))
+          )
+))
+  :file "!usr!include!c++!6!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
